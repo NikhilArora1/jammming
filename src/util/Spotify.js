@@ -1,5 +1,5 @@
 const clientID = 'a7887fbb5e094b1cb979bd51362e6ee1';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'http://nikhil-arora.com/jammming/';
 let accessToken;
 export const Spotify = {
     getAccessToken() {
