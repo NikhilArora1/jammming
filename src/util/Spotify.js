@@ -1,5 +1,5 @@
 const clientID = 'a7887fbb5e094b1cb979bd51362e6ee1';
-const redirectURI = 'http://nikhil-arora.com/jammming/';
+const redirectURI = 'https://nikhil-arora.com/jammming/';
 let accessToken;
 export const Spotify = {
     getAccessToken() {
@@ -12,7 +12,7 @@ export const Spotify = {
             if (token && expiresIn) {
                 accessToken = token[1];
                 window.setTimeout(() => accessToken = '', expiresIn[1] * 1000);
-                window.history.pushState('Access Token', null, '/');
+                window.history.pushState('Access Token', null, '/jammming');
             } else {
                 // access token is empty and not in url
                 window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectURI}`;
